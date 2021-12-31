@@ -44,6 +44,7 @@ body {
 
 #menuopen:checked ~ .menuopen {
     left:170px !important;
+    transform: rotate(180deg);
 }
 
 .menu:hover ~ .menuopen {
@@ -65,7 +66,7 @@ body {
     align-items:center;
     justify-content:center;
     border-radius:15px;
-    transition: left 0.2s ease-in-out;
+    transition: left 0.2s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .menuopen span {
@@ -74,7 +75,7 @@ body {
 
 .menu {
     height:100vh;
-    width:150px;
+    width:100px;
     position:fixed;
     background:#015;
     left:-150px;
@@ -100,7 +101,7 @@ body {
 }
 
 .kategoria {
-    width:150px;
+    width:100px;
     margin-bottom:5px;
     height:75px;
     margin-left:-200px;
@@ -127,17 +128,18 @@ body {
 
 .kategoria h3 {
     color:white;
+    text-align:center;
 }
 
 .podkategoria {
-    width:150px;
+    width:130px;
     padding:10px 0;
     display:none;
     flex-direction:column;
     position:absolute;
     align-items:center;
     justify-content:center;
-    left:150px;
+    left:100px;
     background:#015;
     border-radius:0 20px 20px 0px;
     opacity:0;
@@ -145,7 +147,7 @@ body {
 }
 
 .podkategoria div:not(.podpodkategoria) {
-    width:150px;
+    width:130px;
     font-size:15px;
     display:flex;
     align-items:center;
@@ -157,7 +159,7 @@ body {
     text-align:center;
     border-radius:15px;
     padding:5px;
-    width:130px;
+    width:120px;
 }
 
 .podkategoria div h3:hover {
@@ -186,20 +188,19 @@ body {
 }
 
 .podpodkategoria {
-    width:150px;
+    width:130px;
     padding:10px 0;
     display:none;
     flex-direction:column;
     position:absolute;
     align-items:center;
     justify-content:center;
-    left:150px;
+    left:130px;
     background:#015;
     border-radius: 20px;
 }
 
 .podpodkategoria div {
-    width:100%;
     font-size:15px;
 }
 
@@ -216,7 +217,7 @@ body {
 .podpodkategoria hr {
     margin:10px 0;
     height:1px;
-    width:150px;
+    width:100px;
     border:none;
     background:#17f;
 }

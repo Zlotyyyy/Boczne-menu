@@ -43,12 +43,12 @@ body {
 }
 
 #menuopen:checked ~ .menuopen {
-    left:170px !important;
+    left:120px !important;
     transform: rotate(180deg);
 }
 
 .menu:hover ~ .menuopen {
-    left:170px !important;
+    left:120px !important;
 }
 
 .menuopen {
@@ -78,7 +78,7 @@ body {
     width:100px;
     position:fixed;
     background:#015;
-    left:-150px;
+    left:-100px;
     border-radius:0px 20px 20px 0px;
     display:flex;
     transition:left 0.2s ease-in-out;

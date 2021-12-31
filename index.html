@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boczne Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="tlo"><br>
+        .tlo {<br>
+        position:absolute;<br>
+        background:linear-gradient<br>
+        (-45deg,#121212,#232373,#121212);<br>
+        color:transparent;<br>
+        background-clip: text;<br>
+        -moz-background-clip: text;<br>
+        -webkit-background-clip: text;<br>
+        top:10vh;<br>
+        left:30vh;<br>
+        transform:rotate(-12deg) scale(1.5);<br>
+        opacity:0.6;<br>
+        }<br>
+    </h1>
+
+    <input type="checkbox" name="menuopen" id="menuopen">
+
+
+    <div class="menu">
+        <div style="--i:0;" class="kategoria start">
+            <div class="dot"></div>
+            <h3>Start</h3>
+        </div>
+        <div style="--i:1;" class="kategoria ofirmie">
+            <div class="dot"></div>
+            <h3>O firmie</h3>
+        </div>
+        <div style="--i:2;" class="kategoria handel">
+            <div class="dot"></div>
+            <h3>Handel</h3>
+            <div class="podkategoria">
+                <div>
+                    <h3>Sprzedaż projektowa</h3>
+                </div>
+                <hr>
+                <div>
+                    <h3>Oferta pracy na stanowisku "Handlowiec"</h3>
+                </div>
+            </div>
+        </div>
+        <div style="--i:3;" class="kategoria strefadruku">
+            <div class="dot"></div>
+            <h3>Strefa Druku</h3>
+            <div class="podkategoria">
+                <div class="opcja">
+                    <h3>Wynajem urządzeń</h3>
+                    <div class="podpodkategoria">
+                        <div>
+                            <h3>Urządzenia A3</h3>
+                        </div>
+                        <hr>
+                        <div>
+                            <h3>Urządzenia A4</h3>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="opcja">
+                    <h3>Sprzedaż urządzeń używanych</h3>
+                    <div class="podpodkategoria">
+                        <div>
+                            <h3>Urządzenia A3</h3>
+                        </div>
+                        <hr>
+                        <div>
+                            <h3>Urządzenia A4</h3>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="opcja">
+                    <h3>Sprzedaż urządzeń nowych</h3>
+                    <div class="podpodkategoria">
+                        <div>
+                            <h3>Urządzenia A3</h3>
+                        </div>
+                        <hr>
+                        <div>
+                            <h3>Urządzenia A4</h3>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="opcja">
+                    <h3>Serwis</h3>
+                    <div class="podpodkategoria">
+                        <div>
+                            <h3>Zamów toner / serwis</h3>
+                        </div>
+                        <hr>
+                        <div>
+                            <h3>Do Pobrania</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="--i:4;" class="kategoria uslugi">
+            <div class="dot"></div>
+            <h3>Usługi</h3>
+        </div>
+        <div style="--i:5;" class="kategoria kontakt">
+            <div class="dot"></div>
+            <h3>Kontakt</h3>
+        </div>
+        
+    </div>
+    <label for="menuopen" class="menuopen">
+        <span>></span>
+    </label>
+</body>
+</html>

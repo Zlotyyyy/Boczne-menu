@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+* {
+    margin:0;
+    padding:0;
+}
+
+body,html {
+    min-width:100vw;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+body {
+    background:linear-gradient(-45deg,#343434,#565656,#343434);
+    font-family:lato;
+}
+.tlo {
+    position:absolute;
+    background:linear-gradient(-45deg,#121212,#232373,#121212);
+    color:transparent;
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    top:10vh;
+    left:80vh;
+    transform:rotate(-12deg) scale(2.0);
+    opacity:0.6;
+}
+
+#menuopen {
+    display:none;
+}
+
+#menuopen:checked ~ .menu {
+    left:0 !important;
+}
+
+#menuopen:checked ~ .menu .kategoria {
+    margin-left:0 !important;
+    transition:margin-left 0.3s ease-in-out calc(0.1s * var(--i));
+}
+
+#menuopen:checked ~ .menuopen {
+    left:170px !important;
+}
+
+.menu:hover ~ .menuopen {
+    left:170px !important;
+}
+
+.menuopen {
+    color:white;
+    font-size:50px;
+    user-select: none;
+    cursor:pointer;
+    width:40px;
+    height:40px;
+    position:absolute;
+    top:10px;
+    left:20px;
+    background:#015;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:15px;
+    transition: left 0.2s ease-in-out;
+}
+
+.menuopen span {
+    margin-top:-8px;
+}
+
+.menu {
+    height:100vh;
+    width:150px;
+    position:fixed;
+    background:#015;
+    left:-150px;
+    border-radius:0px 20px 20px 0px;
+    display:flex;
+    transition:left 0.2s ease-in-out;
+    flex-wrap:wrap;
+    flex-direction:column;
+    justify-content: center;
+    z-index:999;
+    padding-right:10px;
+}
+
+.menu:hover:not(.menu .menuopen) {
+    left:0;
+}
+
+.menu:hover .kategoria {
+    margin-left:0;
+    transition:margin-left 0.3s ease-in-out calc(0.1s * var(--i));
+}
+
+.kategoria {
+    width:150px;
+    margin-bottom:5px;
+    height:75px;
+    margin-left:-200px;
+    display:flex;
+    background:rgba(100,100,255,0.3);
+    border-radius:0px 20px 20px 0px;
+    align-items:center;
+    justify-content:center;
+    transition:margin-left calc(0.1s * var(--i)) ease-in-out;
+    transition:margin-left 0.2s ease-in-out;
+}
+
+.kategoria:hover {
+    background:rgba(100,100,255,0.5);
+}
+
+.dot {
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:white;
+    margin-right:10px;
+}
+
+.kategoria h3 {
+    color:white;
+}
+
+.podkategoria {
+    width:150px;
+    padding:10px 0;
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    align-items:center;
+    justify-content:center;
+    left:150px;
+    background:#015;
+    border-radius:0 20px 20px 0px;
+    opacity:0;
+    transition:opacity 0.2s ease-in-out 0.1s;
+}
+
+.podkategoria div:not(.podpodkategoria) {
+    width:150px;
+    font-size:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:10px 0px;
+}
+
+.podkategoria div h3 {
+    text-align:center;
+    border-radius:15px;
+    padding:5px;
+    width:130px;
+}
+
+.podkategoria div h3:hover {
+    background:rgba(100,100,255,0.3);
+}
+
+.opcja:hover h3:not(.podpodkategoria h3) {
+    background:rgba(100,100,255,0.3);
+}
+
+.podkategoria hr {
+    margin:10px 0;
+    height:1px;
+    width:100px;
+    border:none;
+    background:#17f;
+}
+
+.kategoria:hover .podkategoria {
+    display:flex;
+    opacity:1;
+}
+
+.opcja:hover .podpodkategoria {
+    display:flex;
+}
+
+.podpodkategoria {
+    width:150px;
+    padding:10px 0;
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    align-items:center;
+    justify-content:center;
+    left:150px;
+    background:#015;
+    border-radius: 20px;
+}
+
+.podpodkategoria div {
+    width:100%;
+    font-size:15px;
+}
+
+.podpodkategoria div h3 {
+    text-align:center;
+    border-radius:15px;
+    padding:5px;
+}
+
+.podpodkategoria div h3:hover {
+    background:rgba(100,100,255,0.3);
+}
+
+.podpodkategoria hr {
+    margin:10px 0;
+    height:1px;
+    width:150px;
+    border:none;
+    background:#17f;
+}

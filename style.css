@@ -12,6 +12,7 @@ body,html {
 
 body {
     font-family:lato;
+    overflow:hidden;
 }
 
 .tresc {
@@ -25,6 +26,7 @@ body {
     display:flex;
     align-items:center;
     justify-content:center;
+    overflow:hidden;
 }
 
 h2 {

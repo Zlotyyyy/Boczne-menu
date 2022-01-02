@@ -11,9 +11,28 @@ body,html {
 }
 
 body {
-    background:linear-gradient(-45deg,#343434,#565656,#343434);
     font-family:lato;
 }
+
+.tresc {
+    background:linear-gradient(-45deg,#343434,#565656,#343434);
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    filter:brightness(1) blur(0px);
+    transform: scale(1.01);
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+h2 {
+    width:300px;
+    text-align:center;
+    font-size:40px;
+}
+
 .tlo {
     position:absolute;
     background:linear-gradient(-45deg,#121212,#232373,#121212);
@@ -22,10 +41,11 @@ body {
     -moz-background-clip: text;
     -webkit-background-clip: text;
     top:10vh;
-    left:30vw;
+    left:40vw;
     transform:rotate(-12deg) scale(2.0);
     opacity:0.6;
     cursor:default;
+    z-index:-1;
     user-select: none;
 }
 
@@ -35,6 +55,12 @@ body {
 
 #menuopen:checked ~ .menu {
     left:0 !important;
+}
+
+#menuopen:checked ~ .tresc {
+    filter:brightness(0.7) blur(2px);
+    transform: scale(1.1);
+    user-select: none;
 }
 
 #menuopen:checked ~ .menu .kategoria {
@@ -49,6 +75,11 @@ body {
 
 .menu:hover ~ .menuopen {
     left:120px !important;
+}
+
+.menu:hover ~ .tresc {
+    filter:brightness(0.7) blur(2px);
+    transform: scale(1.1);
 }
 
 .menuopen {
